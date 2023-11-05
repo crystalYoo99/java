@@ -13,14 +13,16 @@ public class RestSum_10986 {
 		
 		int N = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
-		long A[] = new long[N+1];
-		long C[] = new long[N];
+		long A[] = new long[N];
+		long C[] = new long[M];
 		long answer = 0;
 		
 		st = new StringTokenizer(br.readLine());
-		for(int i = 1; i <= N; i++) {
+		for(int i = 0; i < N; i++) {
 			A[i] = Integer.parseInt(st.nextToken());
-			A[i] += A[i-1];
+			if (i > 0) {
+				A[i] += A[i-1];
+			}
 			A[i] %= (int)M;
 			if (A[i] == 0) {
 				answer += 1;
