@@ -1,24 +1,27 @@
 package Chapter3;
 
-import java.util.Scanner;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.StringTokenizer;
 
 public class MinValue_11003 {
 
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		int N = sc.nextInt();
-		int L = sc.nextInt();
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		int N = Integer.valueOf(st.nextToken());
+		int L = Integer.valueOf(st.nextToken());
 		Deque<Node> deq = new LinkedList<>();
 		
+		st = new StringTokenizer(br.readLine());
 		for (int i = 0; i < N; i++) {
-			int curr = sc.nextInt();
+			int curr = Integer.valueOf(st.nextToken());
 			
 			while(!deq.isEmpty() && deq.getLast().value > curr) {
 				deq.removeLast();
