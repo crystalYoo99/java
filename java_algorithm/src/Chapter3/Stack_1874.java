@@ -40,5 +40,4 @@ public class Stack_1874 {
 		if(result)
 			System.out.println(bf.toString());
 	}
-
 }
