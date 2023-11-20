@@ -1,4 +1,4 @@
-package Chapter3;
+package Chapter4;
 
 
 import java.io.BufferedReader;
@@ -19,7 +19,7 @@ public class Bubble_1377 {
         Arrays.sort(str);
         int max = 0;
         for (int i =0; i < N; i++) {
-            if (max < str[i].index - i) {
+            if (max < str[       i].index - i) {
                 max = str[i].index-i;
             }
         }
