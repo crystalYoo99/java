@@ -3,6 +3,12 @@
 ## PART1 기초
 | **CHAPTER**                                  | **SUMMARY**  |
 |------------------------------------------|--------------|
-| 1장. 자바  8, 9, 10, 11 :  무슨 일이 일어나고 있는가 ? | [12/11 ~](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/1%EC%9E%A5/Chapter1.md) |
+| 1장. 자바  8, 9, 10, 11 :  무슨 일이 일어나고 있는가 ? | [12/11 ~](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap01/Chapter1.md) |
 | 2장. 동작 파라미터화 코드 전달하기                     |              |
 | 3장. 람다표현식                                |              |
+
+## DAILY
+| **DATE**   | **PAGE**  | **KEYWORD** |
+|------------|-----------|-------------|
+| 2023.12.11 | p.37 ~ 67 | 스트림, 메서드 참조, 람다, 디폴트메서드 |
+| 2023.12.12 | p.68 ~ 98 |             |
