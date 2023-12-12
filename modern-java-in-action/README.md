@@ -1,11 +1,11 @@
 # 모던 자바 인 액션
 
 ## PART1 기초
-| **CHAPTER**                                  | **SUMMARY**  |
-|------------------------------------------|--------------|
-| 1장. 자바  8, 9, 10, 11 :  무슨 일이 일어나고 있는가 ? | [12/11 ~](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap01/Chapter1.md) |
-| 2장. 동작 파라미터화 코드 전달하기                     |              |
-| 3장. 람다표현식                                |              |
+| **CHAPTER**                                  | **SUMMARY**                                                                                           |
+|------------------------------------------|-------------------------------------------------------------------------------------------------------|
+| 1장. 자바  8, 9, 10, 11 :  무슨 일이 일어나고 있는가 ? | [12/11 ~ 11](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap01/Chapter1.md) |
+| 2장. 동작 파라미터화 코드 전달하기                     | [12/12 ~ 12](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap02/Chapter2.md) |
+| 3장. 람다표현식                                |                                                                                                       |
 
 ## DAILY
 | **DATE**   | **PAGE**  | **KEYWORD** |
