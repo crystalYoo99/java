@@ -13,7 +13,7 @@
 | 4장. 스트림 소개                               | [12/14 ~ 14](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap04/Chapter4.md) |
 | 5장. 스트림 활용                               | [12/14 ~ 19](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap05/Chapter5.md) |
 | 6장. 스트림으로 데이터 수집                         | [12/19 ~ 20](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap06/Chapter6.md) |
-| 7장. 병렬 데이터 처리와 기능                        | [12/20 ~ ](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap07/Chapter7.md)   |
+| 7장. 병렬 데이터 처리와 기능                        | [12/20 ~ 21](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap07/Chapter7.md)  |
 
 ## PART3 스트림과 람다를 이용한 효과적 프로그래밍
 | **CHAPTER**    | **SUMMARY**                                                                                           |
@@ -29,4 +29,5 @@
 | 2023.12.18 | p.155 ~ 187 | 필터링, 슬라이싱, 매칭, 검색, 매핑, 리듀싱, Optional               |
 | 2023.12.19 | p.188 ~ 219 | 무한스트림, Collectors 클래스                              |
 | 2023.12.20 | p.219 ~ 242 | 커스텀 컬렉터, 병렬 스트림                                    |
-| 2023.12.21 | p.242 ~ 272 |                                     |
+| 2023.12.21 | p.242 ~ 272 | 병렬 스트림, parallel(), 포크/조인 프레임워크, Spliterator, 늦은 바인딩 |
+| 2023.12.22 | p.272 ~     |  |

@@ -1,5 +1,5 @@
 # Chapter 7. 병렬 데이터 처리와 성능
-> Keyword : 병렬 스트림, parallel(), 포크/조인 프레임워크, Spliterator
+> Keyword : 병렬 스트림, parallel(), 포크/조인 프레임워크, Spliterator, 늦은 바인딩
 
 ## 7.1 병렬 스트림
 - 각각의 스레드에서 처리할 수 있도록 스트림 요소를 여러 청크로 분할한 스트림
