@@ -27,6 +27,7 @@ public class PrimeNumbersCollector implements Collector<Integer,
 
     // 2단계 : 리듀싱 연산 구현
     // supplier 메서드는 누적자를 만드는 함수를 반환
+    // accumulator 메서드는 스트림의 요소를 어떻게 수집할지 결정. 가장 중요.
     @Override
     public Supplier<Map<Boolean, List<Integer>>> supplier() {
         return () -> new HashMap<Boolean, List<Integer>>() {{
@@ -45,6 +46,10 @@ public class PrimeNumbersCollector implements Collector<Integer,
         };
     }
 
+    // 3단계 : 병렬 실행할 수 있는 컬렉터 만들기(가능하다면)
+    // combiner 메서드는 병렬 수집 과정에서 두 부분 누적자를 합칠 수 있는 메서드
+    //알고리즘 자체가 순차적이라 컬렉터를 실제 병렬로 사용할 수 없어서 combiner 메서드는 호출될 일이 없음.
+    // 빈구현으로 남겨둬도 되지만 학습용 구현
     @Override
     public BinaryOperator<Map<Boolean, List<Integer>>> combiner() {
         return (Map<Boolean, List<Integer>> map1, Map<Boolean, List<Integer>> map2) -> { // 두 번째 맵을 첫 번째 맵에 병합
@@ -54,9 +59,11 @@ public class PrimeNumbersCollector implements Collector<Integer,
         };
     }
 
+    // 4단계 : finisher 메서드와 컬렉터의 characteristics 메서드
     @Override
     public Function<Map<Boolean, List<Integer>>, Map<Boolean, List<Integer>>> finisher() {
-        return Function.identity(); // 최종 수집 과정에서 데이터 변환이 필요하지 않으므로 항등 함수 반환
+        // accumulator의 형식은 컬렉터 결과 형식과 같아서 변환 과정 필요 없음
+        return Function.identity(); // 최종 수집 과정에서 데이터 변환이 필요하지 않으므로 항등 함수(identity) 반환
     }
 
     @Override

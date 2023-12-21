@@ -190,12 +190,17 @@ List<Dish> dishes = menuStream.collect(
 
 ## 6.6 커스텀 컬렉터를 구현해서 성능 개선하기
 Collector 인터페이스를 구현하는 새로운 클래스를 선언한 다음에 Collector 인터페이스에서 요구하는 메서드 다섯 개를 구현
-### 1단계 : Collector 클래스 시그니처 정의
+### 1단계 : Collector 클래스 시그니처 정의 
 public interface Collector<T, A, R>
 T는 스트림 요소의 형식, A는 중간 결과를 누적하는 객체의 형식, R은 collect 연산의 최종 결과 형식
-### 2단계 : 리듀싱 연산 구현
-### 3단계 : 병렬 실행할 수 있는 컬렉터 만들기(가능하다면)
+### 2단계 : 리듀싱 연산 구현 (supplier(), accumulator())
+supplier 메서드는 누적자를 만드는 함수를 반환
+accumulator 메서드는 스트림의 요소를 어떻게 수집할지 결정. 가장 중요.
+### 3단계 : 병렬 실행할 수 있는 컬렉터 만들기(가능하다면) (combiner())
+combiner 메서드는 병렬 수집 과정에서 두 부분 누적자를 합칠 수 있는 메서드
+알고리즘 자체가 순차적이라 컬렉터를 실제 병렬로 사용할 수 없다면, combiner 메서드는 호출될 일이 없음. 이럴 때는 빈구현으로 남겨둬도 된다.
 ### 4단계 : finisher 메서드와 컬렉터의 characteristics 메서드
+characteristics : IDENTITY_FINISH, UNORDERED, CONCURRENT
 
 
 ## 6.7 마치며
