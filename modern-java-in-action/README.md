@@ -19,6 +19,8 @@
 | **CHAPTER**    | **SUMMARY**                                                                                           |
 |----------------|-------------------------------------------------------------------------------------------------------|
 | 8장. 컬렉션 API 개선 | [12/22 ~ 22](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap08/Chapter8.md) |
+| 9장. 리팩터링, 테스팅, 디버깅 | [24/1/2 ~ 2](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap09/Chapter9.md) |
+
 
 ## DAILY
 | **DATE**   | **PAGE**    | **KEYWORD**                                        |
@@ -31,4 +33,5 @@
 | 2023.12.19 | p.188 ~ 219 | 무한스트림, Collectors 클래스                              |
 | 2023.12.20 | p.219 ~ 242 | 커스텀 컬렉터, 병렬 스트림                                    |
 | 2023.12.21 | p.242 ~ 272 | 병렬 스트림, parallel(), 포크/조인 프레임워크, Spliterator, 늦은 바인딩 |
-| 2023.12.22 | p.272 ~ 292 |  |
+| 2023.12.22 | p.272 ~ 292 | 컬렉션 API |
+| 2024.01.02 | p.292 ~ 320 | 리팩터링, OODP, 람다 표현식, 테스팅, 디버깅, 스택 트레이스 |
