@@ -16,11 +16,17 @@
 | 7장. 병렬 데이터 처리와 기능                        | [12/20 ~ 21](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap07/Chapter7.md)  |
 
 ## PART3 스트림과 람다를 이용한 효과적 프로그래밍
-| **CHAPTER**         | **SUMMARY**                                                                                           |
-|---------------------|-------------------------------------------------------------------------------------------------------|
-| 8장. 컬렉션 API 개선      | [12/22 ~ 22](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap08/Chapter8.md) |
-| 9장. 리팩터링, 테스팅, 디버깅  | [24/1/2 ~ 2](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap09/Chapter9.md) |
-| 10장. 람다를 이용한 도메인 전용 언어 | [24/1/3 ~ ](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap10/Chapter10.md) |
+| **CHAPTER**         | **SUMMARY**                                                                                            |
+|---------------------|--------------------------------------------------------------------------------------------------------|
+| 8장. 컬렉션 API 개선      | [12/22 ~ 22](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap08/Chapter8.md)  |
+| 9장. 리팩터링, 테스팅, 디버깅  | [24/1/2 ~ 2](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap09/Chapter9.md)  |
+| 10장. 람다를 이용한 도메인 전용 언어 | [24/1/3 ~ 4](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap10/Chapter10.md) |
+
+## PART4 매일 자바와 함께
+| **CHAPTER**            | **SUMMARY**                                                                                           |
+|------------------------|-------------------------------------------------------------------------------------------------------|
+| 11장. null 대신 Optional 클래스 | [24/1/4 ~ ](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap11/Chapter11.md) |
+
 
 
 ## DAILY
@@ -36,4 +42,5 @@
 | 2023.12.21 | p.242 ~ 272 | 병렬 스트림, parallel(), 포크/조인 프레임워크, Spliterator, 늦은 바인딩 |
 | 2023.12.22 | p.272 ~ 292 | 컬렉션 API |
 | 2024.01.02 | p.292 ~ 320 | 리팩터링, OODP, 람다 표현식, 테스팅, 디버깅, 스택 트레이스 |
-| 2024.01.03 | p.321 ~ 352 |  |
+| 2024.01.03 | p.321 ~ 352 | DSL, 내부 DSL, 외부 DSL, 다중 DSL, 메서드 체인, 중첩된 함수, 람다 표현식 |
+| 2024.01.04 | p.353 ~ 383 |  |
