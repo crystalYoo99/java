@@ -3,9 +3,9 @@ package chap11.optionalExample;
 public class Main {
     public static void main(String[] args) {
         // 1. 보수적인 자세로 NullPointerException 줄이기.
-        // 다양한 null 확인 코드 추가
+        // 1) 깊은 의심 : 다양한 null 확인 코드 추가
         System.out.println(getCarInsuranceName1(new Person()));
-        // 너무 많은 출구
+        // 2) 너무 많은 출구
         System.out.println(getCarInsuranceName2(new Person()));
     }
     public static String getCarInsuranceName1(Person person) {
