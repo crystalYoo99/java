@@ -23,9 +23,10 @@
 | 10장. 람다를 이용한 도메인 전용 언어 | [24/1/3 ~ 4](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap10/Chapter10.md) |
 
 ## PART4 매일 자바와 함께
-| **CHAPTER**            | **SUMMARY**                                                                                           |
-|------------------------|-------------------------------------------------------------------------------------------------------|
-| 11장. null 대신 Optional 클래스 | [24/1/4 ~ ](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap11/Chapter11.md) |
+| **CHAPTER**               | **SUMMARY**                                                                                            |
+|---------------------------|--------------------------------------------------------------------------------------------------------|
+| 11장. null 대신 Optional 클래스 | [24/1/4 ~ 5](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap11/Chapter11.md) |
+| 12장. 새로운 날짜와 시간 API       | [24/1/5 ~ 5](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap12/Chapter12.md) |
 
 
 
@@ -43,4 +44,5 @@
 | 2023.12.22 | p.272 ~ 292 | 컬렉션 API |
 | 2024.01.02 | p.292 ~ 320 | 리팩터링, OODP, 람다 표현식, 테스팅, 디버깅, 스택 트레이스 |
 | 2024.01.03 | p.321 ~ 352 | DSL, 내부 DSL, 외부 DSL, 다중 DSL, 메서드 체인, 중첩된 함수, 람다 표현식 |
-| 2024.01.04 | p.353 ~ 383 |  |
+| 2024.01.04 | p.353 ~ 383 | null, Optional, NullPointerException |
+| 2024.01.05 | p.384 ~ 412 | 날짜와 시간 라이브러리, 날짜 조작, 포매팅, 파싱, 시간대와 캘린더 |
