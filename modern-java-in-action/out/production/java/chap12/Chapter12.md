@@ -54,9 +54,21 @@ Temporal 인터페이스의 다양한 메서드로 날짜를 조정할 수 있�
 복합적인 포매터를 정의해서 좀 더 세부적으로 포매터 제어 가능
 
 ## 12.3 다양한 시간대와 캘린더 활용 방법
+java.time.ZoneId : 서머타임(DST) 같은 복잡한 사항이 자동으로 처리, 불변클래스
 ### 12.3.1 시간대 사용하기
+- ZoneRules 클래스에는 40개 정도의 시간이 있음
+- ZoneId의 getRules()로 해당 시간대 규정 획득 가능
+- 지역 ID로 특정 ZoneId 구분 ({지역}/{도시} 형식)
+- ZonedDateTime은 지정한 시간대에 상대적인 시점을 표현
+```java
+ZoneId romeZone = ZoneId.of("Europe/Rome");
+ZoneId zoneId = TimeZone.getDefault().toZoneId();
+```
 ### 12.3.2 UTC/Greenwich 기준의 고정 오프셋
+- ZoneID의 서브클래스인 ZoneOffset 클래스로 런던의 그리니치 0도 자오선과 시간값의 차이를 표현
+- OffsetDateTime : ISO-8601 캘린더 시스템에서 정의하는 UTC/GMT와 오프셋으로 날짜와 시간을 표현
 ### 12.3.3 대안 캘린더 시스템 사용하기
+ThaiBuddhistDate, MinguoDate, JapaneseDate, HijrahDate
 
 ## 12.4 마치며
 - 자바 8 이전 버전에서 제공하는 기존의 java.util.Date 클래스와 관련 클래스에서는 여러 불일치점들과 가변성, 어설픈 오프셋, 기본값, 잘못된 이름 결정 등의 설계 결함이 존재했다.
