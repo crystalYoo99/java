@@ -12,6 +12,7 @@ public class BestPriceFinderMain {
         execute("parallel", () -> bestPriceFinder.findPricesParallel("myPhone27S"));
         execute("composed CompletableFuture", () -> bestPriceFinder.findPricesFuture("myPhone27S"));
         execute("CompletableFuture with Custom Executor", () -> bestPriceFinder.findPricesFutureCustomExecutor("myPhone27S"));
+        bestPriceFinder.printPricesStream("myPhone27S");
     }
 
     private static void execute(String msg, Supplier<List<String>> s) {

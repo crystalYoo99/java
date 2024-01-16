@@ -115,4 +115,28 @@ public class BestPriceFinder {
                 .map(CompletableFuture::join)
                 .collect(Collectors.toList());
     }
+
+    // Random delay
+    // 모든 가격 정보를 포함할 때까지 리스트 생성을 기다리지 않도록 프로그램 고치기
+    // 상점에 필요한 일련의 연산 실행 정보를 포함하는 CompletableFuture의 스트림을 직접 제어
+    // Future 스트림을 반환하게 findPrices 메서드 리팩터링
+    public Stream<CompletableFuture<String>> findPricesStream(String product) {
+        return shops.stream()
+                .map(shop -> CompletableFuture.supplyAsync(
+                        () -> shop.getPrice(product), executor))
+                .map(future -> future.thenApply(Quote::parse))
+                .map(future -> future.thenCompose(quote ->
+                        CompletableFuture.supplyAsync(
+                                () -> Discount.applyDiscount(quote), executor)));
+    }
+
+    // CompletableFuture 종료에 반응하기
+    public void printPricesStream(String product) {
+        long start = System.nanoTime();
+        CompletableFuture[] futures = findPricesStream(product)
+                .map(f -> f.thenAccept(s -> System.out.println(s + " (done in " + ((System.nanoTime() - start) / 1_000_000) + " msecs)")))
+                .toArray(size -> new CompletableFuture[size]);
+        CompletableFuture.allOf(futures).join();
+        System.out.println("All shops have now responded in " + ((System.nanoTime() - start) / 1_000_000) + " msecs");
+    }
 }

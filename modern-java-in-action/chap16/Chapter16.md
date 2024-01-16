@@ -25,11 +25,6 @@
 - 비동기 API에서는 메서드가 즉시 반환되며 끝내지 못한 나머지 작업을 호출자 스레드와 동기적으로 실행될 수 있도록 다른 스레드에 할당
 - 동기 API를 사용하는 상황은 블록 호출 / 비동기 API를 사용하는 상황은 비블록 호출
 
-- 고객에게 비동기 API를 제공하는 방법
-- 동기 API를 사용해야할 때 코드를 비블록으로 만드는 방법
-  - 두 개의 비동기 동작을 파이프라인으로 만드는 방법과 두개의 동작 결과를 하나의 비동기 계싼으로 합치는 방법
-- 비동기 동작의 오나료에 대응하는 방법
-
 ## 16.2 비동기 API 구현
 ### 16.2.1 동기 메서드를 비동기 메서드로 변환
 ### 16.2.2 에러 처리 방법
@@ -88,3 +83,41 @@ CompletableFuture가 끝날 때까지 블록하지 않는다
 - CompletableFuture는 람다 표현식을 사용
 - 람다 덕분에 다양한 동기 태스크, 비동기 태스크를 활용해서 복잡한 연산 수행 방법을 효과적으로 쉽게 정의할 수 있는 선언형 API를 만들 수 있다
 ### 16.4.6 타임아웃 효과적으로 사용하기
+#### orTimeout 메서드
+- 지정된 시간이 지난 후에 CompletableFuture를 TimeoutException으로 완료하면서 또 다른 CompletableFuture를 반환할 수 있도록 내부적으로 ScheduledThreadExecutor를 활용
+- 계산 파이프라인을 연결하고 여기서 TimeoutException이 발생했을 때 사용자가 쉽게 이해할 수 있는 메시지 제공 가능
+#### completeOnTimeout 메서드
+- 서버에서 얻은 값이 아닌 미리 지정된 값을 사용
+- CompletableFuture에 타임아웃이 발생하면 기본값으로 처리
+- orTimeout()처럼  CompletableFuture를 반환해서 이 결과를 다른 CompletableFuture 메서드와 연결 가능
+
+## 16.5 CompletableFuture의 종료에 대응하는 방법
+### 16.5.1 최저가격 검색 애플리케이션 리팩터링
+일련의 연산 실행 정보를 포함하는 CompletableFuture의 스트림을 직접 제어
+Future 스트림을 반환하게 메서드 리팩터링
+#### thenAccept 메서드
+- 연산 결과를 소비하는 Consumer를 인수로 받는다
+- CompletableFuture가 생성한 결과를 어떻게 소비할지 미리 지정했으므로 CompletableFuture<Void>를 반환
+- thenAcceptAsync() : CompletableFuture가 완료된 스레드가 아니라 새로운 스레드를 이용해서 Consumer를 실행
+#### allOf 메서드
+- CompletableFuture 배열을 입력으로 받아 CompletableFuture<Void>를 반환
+- 전달된 모든 CompletableFuture가 완료되어야 CompletableFuture<Void>가 완료됨
+- allOf()가 반환하는 CompletableFuture에 join을 호출하면 원래 스트림의 모든 CompletableFuture의 실행 완료를 기다릴 수 있다
+#### anyOf 메서드
+- 배열의 CompletableFuture 중 하나의 작업이 끝나길 기다리는 상황
+- CompletableFuture 배열을 입력으로 받아서 CompletableFuture<Object>를 반환
+- CompletableFuture<Object>는 처음으로 완료한 CompletableFuture의 값으로 동작을 완료
+### 16.5.2 응용
+
+## 16.6 로드맵
+플로 API : CompletableFuture(연산 또는 값으로 종료하는 일회성 기법)의 기능이 한 번에 종료되지 않고 일련의 값을 생산하도록 일반화
+
+## 16.7 마치며
+- 한 개 이상의 원격 외부 서비스를 시용하는 긴 동작을 실행할 때는 비동기 방식으로 애플리케이션의 성능과 반응성을 향상시킬 수 있다.
+- 우리 고객에게 비동기 API를 제공하는 것을 고려해야 한다. CompletableFuture의 기능을 이용하면 쉽게 비동기 API를 구현할 수 있다.
+- CompletableFuture를 이용할 때 비동기 태스크에서 발생한 에러를 관리하고 전달할 수 있다.
+- 동기 API를 CompletableFuture로 감싸서 비동기적으로 소비할 수 있다. 
+- 서로 독립적인 비동기 동작이든 아니면 하나의 비동기 동작이 다른 비동기 동작의 결과에 의존하는 상황이든 여러 비동기 동작을 조립하고 조합할 수 있다.
+- CompletableFuture에 콜백을 등록해서 Future가 동작을 끝내고 결과를 생산했을 때 어떤 코드를 실행하도록 지정할 수 있다.
+- CompletableFuture 리스트의 모든 값이 완료될 때까지 기다릴지 아니면 첫 값만 완료되길 기다릴지 선택할 수 있다.
+- 자바 9에서는 orTimeout, completeOnTimeout 메서드로 CompletableFuture에 비동기 타임아웃 기능을 추가했다.
