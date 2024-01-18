@@ -1,4 +1,4 @@
-package chap19.subset;
+package chap18.subset;
 
 import java.util.ArrayList;
 import java.util.Arrays;
