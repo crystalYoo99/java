@@ -43,7 +43,7 @@
 | 18장. 함수형 관점으로 생각하기            | [24/1/17 ~ 17](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap18/Chapter18.md) |
 | 19장. 함수형 프로그래밍 기법             | [24/1/18 ~ 18](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap19/Chapter19.md) |
 | 20장. OOP와 FP의 조화 : 자바와 스칼라 비교 | [24/1/19 ~ 19](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap20/Chapter20.md) |
-| 21장. 결론 그리고 자바의 미래            | [24/1/19](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap21/Chapter21.md)      |
+| 21장. 결론 그리고 자바의 미래            | [24/1/19 ~ 29](https://github.com/crystalYoo99/java/blob/main/modern-java-in-action/chap21/Chapter21.md)  |
 
 
 
@@ -72,5 +72,7 @@
 | 2024.01.17 | p.552 ~ 583 | 함수형 프로그래밍, 선언형 프로그래밍, 불변성, 부작용 없음, 참조 투명성, 반복과 재귀, 꼬리재귀         |
 | 2024.01.18 | p.585 ~ 615 | 일급시민, 고차원 함수, 커링, 부분 적용, 영속 자료구조, 패턴 매칭, 참조 투명성, 캐싱             |
 | 2024.01.19 | p.617 ~ 647 | 스칼라, 함수, 클로저, 커링, 클래스와 트레이트                                                                |
+| 2024.01.26 | p.647 ~ 672 |                                                                 |
+| 2024.01.29 | p.673 ~ 688 |                                                                 |
 
 
