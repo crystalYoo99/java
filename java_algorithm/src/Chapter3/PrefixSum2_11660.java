@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class PrefixSum2_11660 {
-
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -35,5 +34,4 @@ public class PrefixSum2_11660 {
 			System.out.println(answer);
 		}
 	}
-
 }

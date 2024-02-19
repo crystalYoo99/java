@@ -10,7 +10,15 @@ import java.util.LinkedList;
 import java.util.StringTokenizer;
 
 public class MinValue_11003 {
+	static class Node {
+		public int value;
+		public int index;
 
+		Node(int value, int index) {
+			this.value = value;
+			this.index = index;
+		}
+	}
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -36,15 +44,4 @@ public class MinValue_11003 {
 		bw.flush();
 		bw.close();
 	}
-	
-	static class Node {
-		public int value;
-		public int index;
-		
-		Node(int value, int index) {
-			this.value = value;
-			this.index = index;
-		}
-	}
-
 }
