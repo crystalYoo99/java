@@ -7,9 +7,11 @@
 | 02. 코드의 논리 오류를 어떻게 잡을까? | [2/13](https://github.com/crystalYoo99/java/blob/main/java_algorithm/src/Chapter2/Chapter2.md) |
 
 ## PART2 Do it! 코딩 테스트 — 기초 편
-| **CHAPTER** | **SUMMARY**                                                                                       |
-|-------------|---------------------------------------------------------------------------------------------------|
-| 03. 자료구조    | [2/13 ~ ](https://github.com/crystalYoo99/java/blob/main/java_algorithm/src/Chapter3/Chapter3.md) |
+| **CHAPTER** | **SUMMARY**                                                                                         |
+|-------------|-----------------------------------------------------------------------------------------------------|
+| 03. 자료구조    | [2/13 ~ 21](https://github.com/crystalYoo99/java/blob/main/java_algorithm/src/Chapter3/Chapter3.md) |
+| 04. 정렬      | [2/22 ~ ](https://github.com/crystalYoo99/java/blob/main/java_algorithm/src/Chapter4/Chapter4.md)   |
+
 
 
 
@@ -24,7 +26,7 @@
 | 03-2 구간 합            | p.42 ~ 56   | 2023.02.19 |
 | 03-3 투 포인터           | p.56 ~ 66   | 2023.02.19 |
 | 03-4 슬라이딩 윈도우        | p.67 ~ 78   | 2023.02.20 |
-| 03-5 스택과 큐           | p.79 ~ 97   |            |
+| 03-5 스택과 큐           | p.79 ~ 97   | 2023.02.21 |
 | 04-1 버블 정렬           | p.99 ~ 107  |            |
 | 04-2 선택 정렬           | p.108 ~ 112 |            |
 | 04-3 삽입 정렬           | p.113 ~ 118 |            |

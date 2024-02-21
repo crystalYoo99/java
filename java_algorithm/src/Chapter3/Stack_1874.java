@@ -4,9 +4,7 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class Stack_1874 {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
 		Stack<Integer> stack = new Stack<>();
@@ -37,7 +35,7 @@ public class Stack_1874 {
 			}
 		}
 
-		if(result)
+		if (result)
 			System.out.println(bf.toString());
 	}
 }
