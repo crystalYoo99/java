@@ -3,9 +3,7 @@ package Chapter4;
 import java.util.Scanner;
 
 public class Selection_1427 {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		char[] N = sc.next().toCharArray();
 		int index = 0;
@@ -26,7 +24,5 @@ public class Selection_1427 {
 		}
 		
 		System.out.println(N);
-		
 	}
-
 }
