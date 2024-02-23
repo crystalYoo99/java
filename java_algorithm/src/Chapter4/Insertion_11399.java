@@ -5,9 +5,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class Insertion_11399 {
-
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
 		BufferedReader br  = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.valueOf(br.readLine());
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -48,5 +46,4 @@ public class Insertion_11399 {
 		
 		System.out.println(answer);
 	}
-
 }
