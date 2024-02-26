@@ -10,7 +10,8 @@
 | **CHAPTER** | **SUMMARY**                                                                                         |
 |-------------|-----------------------------------------------------------------------------------------------------|
 | 03. 자료구조    | [2/13 ~ 21](https://github.com/crystalYoo99/java/blob/main/java_algorithm/src/Chapter3/Chapter3.md) |
-| 04. 정렬      | [2/22 ~ ](https://github.com/crystalYoo99/java/blob/main/java_algorithm/src/Chapter4/Chapter4.md)   |
+| 04. 정렬      | [2/22 ~ 26](https://github.com/crystalYoo99/java/blob/main/java_algorithm/src/Chapter4/Chapter4.md) |
+| 05. 탐색      | [2/27 ~ ](https://github.com/crystalYoo99/java/blob/main/java_algorithm/src/Chapter5/Chapter5.md)   |
 
 
 
@@ -31,9 +32,9 @@
 | 04-2 선택 정렬           | p.108 ~ 112 | 2023.02.22 |
 | 04-3 삽입 정렬           | p.113 ~ 118 | 2023.02.23 |
 | 04-4 퀵 정렬            | p.119 ~ 125 | 2023.02.23 |
-| 04-5 병합 정렬           | p.126 ~ 137 |            |
-| 04-6 기수 정렬           | p.138 ~ 143 |            |
-| 05-1 깊이 우선 탐색        | p.145 ~ 161 |            |
+| 04-5 병합 정렬           | p.126 ~ 137 | 2023.02.26 |
+| 04-6 기수 정렬           | p.138 ~ 143 | 2023.02.26 |
+| 05-1 깊이 우선 탐색        | p.145 ~ 161 | 2023.02.27 |
 | 05-2 너비 우선 탐색        | p.162 ~ 179 |            |
 | 05-3 이진 탐색           | p.180 ~ 194 |            |
 | 06-1 그리디 알고리즘        | p.196 ~ 213 |            |
