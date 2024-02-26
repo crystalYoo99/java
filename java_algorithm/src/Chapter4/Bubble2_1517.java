@@ -10,7 +10,6 @@ public class Bubble2_1517 {
 	public static int A[], tmp[];
 	public static long answer;
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		N = Integer.valueOf(br.readLine());
 		
@@ -45,7 +44,7 @@ public class Bubble2_1517 {
 		while (idx1 <= m && idx2 <= e) {
 			if (tmp[idx1] > tmp[idx2]) {
 				A[k] = tmp[idx2];
-				answer = answer + idx2 - k;
+				answer += (idx2 - k);
 				k++;
 				idx2++;
 			} else {

@@ -9,7 +9,6 @@ import java.io.OutputStreamWriter;
 public class Merge_2751 {
 	public static int A[], tmp[];
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		// TODO Auto-generated method stub
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		int N  = Integer.parseInt(br.readLine());
@@ -36,10 +35,11 @@ public class Merge_2751 {
 		int m = s + (e - s) / 2;
 		merge_sort(s, m);
 		merge_sort(m + 1, e);
-		
+
 		for (int i = s; i <= e; i++) {
 			tmp[i] = A[i];
 		}
+
 		int k = s;
 		int idx1 = s;
 		int idx2 = m+1;
@@ -66,5 +66,4 @@ public class Merge_2751 {
 			idx2++;
 		}
 	}
-
 }
