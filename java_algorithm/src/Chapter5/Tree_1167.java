@@ -3,6 +3,14 @@ package Chapter5;
 import java.util.*;
 
 public class Tree_1167 {
+    static class Edge {
+        int e;
+        int value;
+        public Edge (int e, int value) {
+            this.e = e;
+            this.value = value;
+        }
+    }
     static boolean[] visited;
     static int[] distance;
     static ArrayList<Edge>[] A;
@@ -59,13 +67,5 @@ public class Tree_1167 {
                 }
             }
         }
-    }
-}
-class Edge {
-    int e;
-    int value;
-    public Edge (int e, int value) {
-        this.e = e;
-        this.value = value;
     }
 }
