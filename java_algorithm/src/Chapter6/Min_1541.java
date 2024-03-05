@@ -10,7 +10,10 @@ public class Min_1541 {
         int[] minusSum = new int[inputArray.length];
 
         for (int i = 0; i < inputArray.length; i++) {
-
+            String[] temp = inputArray[i].split("\\+");
+            for (int j = 0; j < temp.length; j++) {
+                minusSum[i] += Integer.parseInt(temp[j]);
+            }
         }
 
         int Sum =
