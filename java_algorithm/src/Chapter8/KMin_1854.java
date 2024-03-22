@@ -1,8 +1,6 @@
 package Chapter8;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.nio.Buffer;
 import java.util.Comparator;
 import java.util.PriorityQueue;
@@ -33,7 +31,50 @@ public class KMin_1854 {
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
             int c = Integer.parseInt(st.nextToken());
-
+            W[a][b] = c;
         }
+        PriorityQueue<kNode> pq = new PriorityQueue<>();
+        pq.add(new kNode(1, 0));
+        que[1].add(0);
+        while(!pq.isEmpty()) {
+            kNode u = pq.poll();
+            for (int adjNode = 1; adjNode <= N; adjNode++) {
+                if (W[u.node][adjNode] != 0) {
+                    if (que[adjNode].size() < K) {
+                        que[adjNode].add(u.cost + W[u.node][adjNode]);
+                        pq.add(new kNode(adjNode, u.cost + W[u.node][adjNode]));
+                    }
+                    else if (que[adjNode].peek() > u.cost + W[u.node][adjNode]) {
+                        que[adjNode].poll();
+                        que[adjNode].add(u.cost + W[u.node][adjNode]);
+                        pq.add(new kNode(adjNode, u.cost + W[u.node][adjNode]));
+                    }
+                }
+            }
+        }
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        for (int i = 1; i <= N; i++) {
+            if (que[i].size() == K) {
+                bw.write(que[i].peek() + "\n");
+            } else {
+                bw.write(-1 + "\n");
+            }
+        }
+        bw.flush();
+        bw.close();
+        br.close();
+    }
+}
+
+class kNode implements Comparable<kNode> {
+    int node;
+    int cost;
+    kNode(int node, int cost) {
+        this.cost = cost;
+        this.node = node;
+    }
+    @Override
+    public int compareTo(kNode o) {
+        return this.cost < o.cost ? -1 : 1;
     }
 }
