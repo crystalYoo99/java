@@ -4,10 +4,11 @@ import java.util.*;
 import java.io.*;
 
 public class Kevin_1389 {
-    private static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    private static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    public static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     static int N, M;
     static int distance[][];
+
 
     public static void main(String[] args) throws IOException {
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -40,9 +41,21 @@ public class Kevin_1389 {
             }
         }
 
+        int Min = Integer.MAX_VALUE;
+        int Answer = -1;
+
+        for (int i = 1; i <= N; i++) {
+            int temp = 0;
+            for (int j = 1; j <= N; j++) {
+                temp = temp + distance[i][j];
+            }
+            if (Min > temp) {
+                Min = temp;
+                Answer = i;
+            }
+        }
+
+        System.out.println(Answer);
     }
-    int Min = Integer.MAX_VALUE;
 
-
-    System.out.println(Answer);
 }
